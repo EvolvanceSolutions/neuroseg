@@ -1,13 +1,13 @@
 # neuroseg
 Brain tumor AI detector
-# NeuroSeg â€” Brain Tumor Segmentation from MRI
+# NeuroSeg AI Brain Tumor Segmentation from MRI
 
 U-Net based semantic segmentation for lower-grade glioma (LGG) detection in brain MRI.
 Built over 10 days with systematic ablation â€” every improvement measured independently.
 
 ![Results](results.png)
 
----
+https://www.kaggle.com/code/trainingmarketing/evolvanceneuroseg
 
 ## Results
 
