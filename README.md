@@ -106,7 +106,21 @@ sessions reproduces 0.7878 / 3.7% / 0.7308 exactly.
 
 Not validated for clinical use. Not cleared by any regulatory body. Must not be
 used for diagnosis or treatment decisions.
+# NeuroSeg â€” Brain Tumor Segmentation
 
+| Setup | Tumor Dice | Complete Miss | Empty-scan Dice |
+|---|---|---|---|
+| 1. Baseline U-Net (scratch) | 0.3598 | 44.4% | 0.9752 |
+| 2. + Weighted Sampler | 0.4564 | 25.8% | 0.2650 |
+| 3. + Augmentation | 0.5042 | 24.7% | 0.5280 |
+| 4. + ResNet34 encoder | 0.7878 | 3.7% | 0.7308 |
+| 5. + Post-processing (FINAL) | 0.7832 | 4.4% | 0.7847 |
+
+**Final config:** threshold=0.5, min_component_size=100px
+**Dataset:** LGG (110 patients, patient-level split 88/22)
+**Metrics:** tumor-containing slices only; empty slices reported separately
+
+RESEARCH USE ONLY â€” NOT A MEDICAL DEVICE
 ## Citation
 
 Buda M., Saha A., Mazurowski M.A. (2019). *Association of genomic subtypes of
